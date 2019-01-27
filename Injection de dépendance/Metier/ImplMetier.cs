@@ -9,11 +9,13 @@ namespace Injection_de_dépendance.Metier
 {
     class ImplMetier : IMetier
     {
-        private IDao _dao;
-        public ImplMetier(IDao dao)
-        {
-            this._dao = dao;
-        }
+        public IDao _dao { get; set; }
+        //public ImplMetier(IDao dao)
+        //{
+        //    this._dao = dao;
+        //}
+
+
         public int Calcul()
         {
             return _dao.Calcul() * 3;

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <sectionGroup name = "spring" >
+      <section name ="context" type = "Spring.Context.Support.ContextHandler, Spring.Core"/>
+      <section name ="objects" type = "Spring.Context.Support.DefaultSectionHandler, Spring.Core"/>
+    </sectionGroup>
+  </configSections>
+  <spring>
+    <contexte>
+      <resource uri ="config://spring/objects"/>
+    </contexte>
+    <objects xmlns="http://www.springframework.net" >
+      <object name="MyDao" type ="Injection_de_dépendance.Dao.ImplDao, Injection_de_dépendance.Dao">
+      </object>
+      <object name="MyMetier" type ="Injection_de_dépendance.Metier.ImplMetier, Injection_de_dépendance.Metier">
+      </object>
+    </objects>
+  </spring>
+</configuration>
